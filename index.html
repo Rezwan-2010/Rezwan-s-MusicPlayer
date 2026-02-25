@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background" id="bg-img">
+        <img src="" alt="">
+    </div>
+    <div class="container">
+        <div class="player-img">
+            <img id="cover" src="" alt="">
+        </div>
+        <h2 id="music-title">The Lazy Song</h2>
+        <h3 id="music-artist">Bruno Mars</h3>
+        <div class="player-progress" id="player-progress">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div class="music-duration">
+            <span id="current-time">0:00</span>
+            <span id="duration">0:00</span>
+        </div>
+        <div class="player-controls">
+            <div class="transport-controls">
+                <i class="fa-solid fa-backward" id="prev" title="Previous"></i>
+                <i class="fa-solid fa-play play-button" id="play" title="Play"></i>
+                <i class="fa-solid fa-forward" id="next" title="Next"></i>
+                <i class="fa-solid fa-shuffle" id="shuffle" title="Shuffle"></i>
+                <i class="fa-solid fa-repeat" id="repeat" title="Repeat"></i>
+                <i class="fa-solid fa-heart" id="favorite" title="Favorite"></i>
+            </div>
+            <div class="volume-control">
+                <i class="fa-solid fa-volume-high" id="volume-icon"></i>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.7">
+                <select id="playback-speed">
+                    <option value="0.5">0.5x</option>
+                    <option value="1" selected>1x</option>
+                    <option value="1.5">1.5x</option>
+                    <option value="2">2x</option>
+                </select>
+                <i class="fa-solid fa-moon" id="dark-mode-toggle" title="Dark Mode"></i>
+            </div>
+        </div>
+        <div class="playlist">
+            <h4>Playlist</h4>
+            <ul id="playlist-songs"></ul>
+        </div>
+        <div class="drop-area" id="drop-area">
+            <p>Drag & Drop MP3s here</p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
